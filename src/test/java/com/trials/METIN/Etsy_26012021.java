@@ -1,4 +1,5 @@
 package com.trials.METIN;
+// this tests if etsy allows us to buy smthng
 
 import com.trials.utilities.WebDriverFactory;
 import org.openqa.selenium.By;

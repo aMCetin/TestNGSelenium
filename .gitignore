@@ -1,0 +1,8 @@
+# Project exclude paths
+/target/
+*.jpg
+*.png
+*.bmp
+*.jpeg
+*.gif
+/.idea/

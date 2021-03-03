@@ -20,16 +20,16 @@ public class Etsy_26012021 {
 
     @BeforeMethod
     public void setUp() {
-      driver = WebDriverFactory.getDriver("chrome");
+        driver = WebDriverFactory.getDriver("chrome");
         //  driver = WebDriverFactory.getDriver("FireFOX");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
 
     @AfterMethod
-    public void tearDown() throws InterruptedException {
+    public void tearDown()  {
         driver.manage().deleteAllCookies();
-      //  Thread.sleep(3000);
+        //  Thread.sleep(3000);
         driver.quit();
     }
 
@@ -80,4 +80,17 @@ public class Etsy_26012021 {
         Thread.sleep(1000);
     }
 
+    //*[@id="tyche_cmp_modal"]
+    @Test   //ok
+    public void Pokemon() {
+
+//1. run the URL
+        driver.get("https://bulbapedia.bulbagarden.net/wiki/Main_Page");
+
+//2. overpass the pop up
+        driver.findElement(By.xpath("//a[contains(.,'Continue to Site')]")).click();
+        //   Thread.sleep(1000);
+
+
+    }
 }
